@@ -92,56 +92,61 @@ export default Breadcrumb;
 items,
   disableHome = false,
   changeDefaultColor = "text-blue-700",
-  changeActivityColor,
-  changeDefaultIcon,
-  needSchema,
-  schemaItemProp,
-  schemaItemType,
-  needEllipsisIfLong,
-  ellipsisLength,
-  fontBold,
-  activeItemBold,
-  
+  changeActivityColor = "text-gray-700",
+  changeDefaultIcon = ›,
+  needSchema = true,
+  schemaItemProp = "ListItem" ,
+  schemaItemType = "Thing",
+  needEllipsisIfLong = true,
+  ellipsisLength = 25,
+  fontBold = , not need
+  activeItemBold = false,
+   
+Title : Breadcrumb with SEO
 
-  1. Items: 
-        which will be send to the package and item will content a list of breadcrumbs which you want to render. For eg
-      const breadcrumbItems = [
-        {title: "", link : "", colorDisable: },
-        {title: "", link : "", colorDisable: },
-        {title: "", link : "", colorDisable: },
-      ]
-        
-      In title 
+Description: 
+  This breadcrumb package seamlessly integrates with search engine optimization 
+  (SEO) strategies through structured schema implementation. By leveraging 
+  schema markup, it enhances a website's technical configuration, content 
+  relevance, and link popularity, resulting in improved visibility and 
+  accessibility in search engine results.
 
-      
-
-
-
- Title and Description
-
-  Title : Breadcrumb with SEO
-
-  Description : This breadcrumb package come with inbuild SEO with help of schema 
-                which will help you website to improves a website's technical 
-                configuration, content relevance, and link popularity so that its 
-                pages are easier to find, more relevant, and more popular in search 
-                results.
+  SEO Benefits: Breadcrumbs provided by this package not only enhance user 
+  experience by offering clear navigation paths but also deliver substantial 
+  SEO advantages. Search engines like Google utilize breadcrumbs, along with 
+  schema markup, to better comprehend website structures. This comprehensive 
+  understanding leads to enhanced indexing, increased visibility in search results, 
+  and improved rankings. Additionally, breadcrumbs aided by schema markup assist 
+  users and search engines in identifying page relationships, contributing to a 
+  more organized and accessible website.
 
   Installation :
-  npm install breadcrumbs-seo -f
+  npm install breadcrumbs-seo
 
-  Usage : first need to create a breadcrumbItems array which will content a object 
-          of each route and in the object it will content title, link, and 
-          colorDisable 
+  Usage : first you need to create a breadcrumbItems array which will content a 
+          object of each route and in the object it will content title, link, and 
+          colorDisable and title and link be dynamite
 
           Eg: 
            const breadcrumbItems = [
-              {title: "Home", link : "/", colorDisable: },
-              {title: "Videos", link : "/videos", colorDisable: },
-              {title: "(eg :video title - Create Html)", link : "/videoId", colorDisable: },
+              {
+                title: "Home", 
+                link : "/", 
+                colorDisable: false},
+              {
+                title: "Videos", 
+                link : "/videos", 
+                colorDisable: false
+              },
+              {
+                title: "(eg :video title - Create Html file on the vs code for the first time)", 
+                link : "/videoId", 
+                colorDisable: false
+              },
             ]
 
-          and in any component you want to use the you have to import the Package use like this    
+          and in any component you want to use the you have to import the Package 
+          use it like this
             <>
               <BreadcrumbSeo items={breadcrumbItems}/>
             </>
@@ -149,15 +154,20 @@ items,
           so output will look something like this 
 
           Output : 
-          Home > Video > Create Html 
+          Home > Video > Create Html file on the vs code for the first time
 
-          and if any of the title length is longer then 25 then it will truncate it, if the 
-          video title is something like this "Create Html file on the vs code for the first time", 
-          so output will look something like this
+          and if any of the title from the object length is longer then 25 then it 
+          will truncate it, if the video title is something like this "Create Html 
+          file on the vs code for the first time", so output will look something 
+          like this
 
           Output : 
           Home > Video > Create Html file on the v...
 
+          if you don't want to truncate the title then use this "needEllipsisIfLong = false" //-- change this key to doNotEllipsis -- //
+          and default value of the "needEllipsisIfLong = true or if you want to 
+          change the ellipsis length then use this "ellipsisLength : 50", default 
+          value is 25
 
  */
 }
