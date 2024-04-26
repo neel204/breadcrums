@@ -130,10 +130,6 @@ Description:
           Eg: 
            const breadcrumbItems = [
               {
-                title: "Home", 
-                link : "/", 
-                colorDisable: false},
-              {
                 title: "Videos", 
                 link : "/videos", 
                 colorDisable: false
@@ -166,8 +162,36 @@ Description:
 
           if you don't want to truncate the title then use this "needEllipsisIfLong = false" //-- change this key to doNotEllipsis -- //
           and default value of the "needEllipsisIfLong = true or if you want to 
+
+          <>
+            <BreadcrumbSeo items={breadcrumbItems} doEllipsis={false}/>
+          </>
+          
+          Output : 
+          Home > Video > Create Html file on the vs code for the first time
+
           change the ellipsis length then use this "ellipsisLength : 50", default 
           value is 25
+
+          if needEllipsisIfLong is true and ellipsisLength is 40
+
+          <>
+            <BreadcrumbSeo items={breadcrumbItems} doEllipsis={true as default} ellipsisLength={40}/>
+          </>
+
+          OutPut : 
+          Home > Video > Create Html file on the vs code for the ...
+
+          in this if you want to disable Home option then use this disableHome = true 
+          then output will look something like this
+
+          <>
+            <BreadcrumbSeo items={breadcrumbItems} disableHome={true}/>
+          </>
+
+          Output : 
+          Video > Create Html file on the v...
+
 
  */
 }
