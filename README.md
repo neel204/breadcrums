@@ -43,3 +43,22 @@ const breadcrumbItems = [
   <BreadcrumbSeo items={breadcrumbItems} />
 </>
 ```
+
+Output :
+
+```bash
+Home > Video > Create Html file on the vs code for the first time
+```
+
+and if any of the title from the object length is longer then 25 then it
+will truncate it, if the video title is something like this "Create Html
+file on the vs code for the first time", so output will look something
+like this
+
+OutPut :
+
+```bash
+Home > Video > Create Html file on the v...
+```
+
+if you don't want to truncate the title then use this "doEllipsis = false" and default value of the "doEllipsis = true or if you want to
