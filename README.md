@@ -1,3 +1,5 @@
+## # Breadcrumb with SEO [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Implement breadcrumbs with SEO benefits for enhanced navigation and search engine visibility.
 
 ## Description
@@ -14,4 +16,32 @@ To install the package, use npm:
 
 ```bash
 npm install breadcrumbs-seo
+```
+
+## Usage
+
+```bash
+const breadcrumbItems = [
+  {
+    title: "Videos",
+    link: "/videos",
+    colorDisable: false
+  },
+  {
+    title: "(eg: video title - Create Html file on the vs code for the first time)",
+    link: "/videoId",
+    colorDisable: false
+  }
+];
+```
+
+Import the BreadcrumbSeo component from the package and use it with your breadcrumbItems array in any component where you want to display breadcrumbs:
+
+```bash
+import { BreadcrumbSeo } from "breadcrumbs-seo";
+
+// In your component JSX
+<>
+  <BreadcrumbSeo items={breadcrumbItems} />
+</>
 ```
