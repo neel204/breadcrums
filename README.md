@@ -20,7 +20,11 @@ npm install breadcrumbs-seo
 
 ## Usage
 
+Import the BreadcrumbSeo component from the package and use it with your breadcrumbItems array in any component where you want to display breadcrumbs:
+
 ```bash
+import { BreadcrumbSeo } from "breadcrumbs-seo";
+
 const breadcrumbItems = [
   {
     title: "Videos",
@@ -33,12 +37,6 @@ const breadcrumbItems = [
     colorDisable: false
   }
 ];
-```
-
-Import the BreadcrumbSeo component from the package and use it with your breadcrumbItems array in any component where you want to display breadcrumbs:
-
-```bash
-import { BreadcrumbSeo } from "breadcrumbs-seo";
 
 // In your component JSX
 <>
